@@ -3,8 +3,8 @@ import React, { useState } from "react";
 import Mynavbar from "./components/Mynavbar";
 import TextForm from "./components/TextForm";
 import Alert from "./components/Alert";
-import Accordion from "./components/Accordion";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// import Accordion from "./components/Accordion";
+// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   const [darkMode, setMode] = useState(false);
@@ -34,7 +34,7 @@ function App() {
 
   return (
     <>
-      <Router>
+      {/* <Router> */}
         <Mynavbar
           title="TextUtils"
           about="myabout"
@@ -42,10 +42,10 @@ function App() {
           toggleMode={toggleMode}
         />
         <Alert alertContent={alertBox}></Alert>
-        <Routes>
+        {/* <Routes>
           <Route
             path="/"
-            element={
+            element={ */}
               <TextForm
                 heading="Enter your text here .."
                 showAlert={showAlert}
@@ -54,11 +54,11 @@ function App() {
                 darkMode={darkMode}
                 toggleMode={toggleMode}
               />
-            }
-          />
-          <Route path="/about" element={<Accordion />} />
-        </Routes>
-      </Router>
+            {/* }
+          /> */}
+          {/* <Route path="/about" element={<Accordion />} /> */}
+        {/* </Routes>
+      </Router> */}
     </>
   );
 }
